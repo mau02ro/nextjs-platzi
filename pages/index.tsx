@@ -4,8 +4,20 @@ import Layout from '@components/Layout/Layout'
 import KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'
 import ProductList from '@components/ProductList/ProductList'
 
-export const getServerSideProps = async () => {
-  const response = await fetch('api/avo')
+// export const getServerSideProps = async () => {
+//   const response = await fetch('https://nextjs-platzi.vercel.app/api/avo')
+//   const {data} = await response.json()
+
+
+//   return {
+//     props:{
+//       productList: data
+//     }
+//   }
+// }
+
+export const getStaticProps = async () => {
+  const response = await fetch('https://nextjs-platzi.vercel.app/api/avo')
   const {data} = await response.json()
 
 
